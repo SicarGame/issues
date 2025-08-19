@@ -1,0 +1,139 @@
+name: Bug Report
+description: Report a problem affecting gameplay, stability, visuals, audio, network, or performance.
+title: "[Bug] Brief summary"
+labels: ["bug", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues before filing a new report. Do not include personal information or account details.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A one-sentence description of the problem.
+      placeholder: Example — Stuck on loading screen after joining a public match
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Numbered steps that consistently reproduce the problem.
+      placeholder: |
+        1. Launch the game
+        2. Join a Public Game
+        3. Observe loading screen never completes
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      placeholder: Example — Match loads into the map lobby within 15 seconds
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      placeholder: Example — Loading spinner persists for over 60 seconds and returns to menu
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Rarely
+        - Unable to reproduce again
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Evidence
+      description: Attach a screenshot or paste a link to a short video.
+      placeholder: Drag-and-drop images or paste a link
+  - type: input
+    id: build
+    attributes:
+      label: When did this start?
+      description: Approximate date/time or game version if known.
+      placeholder: Example — 2025-08-10 build during EU evening
+  - type: input
+    id: mode
+    attributes:
+      label: Mode / Map / Match Type
+      placeholder: Example — Public Game, Forest map
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - severity:critical
+        - severity:high
+        - severity:medium
+        - severity:low
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      multiple: false
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: browser_version
+    attributes:
+      label: Browser Version
+      placeholder: Example — Chrome 126.0.0
+  - type: input
+    id: device
+    attributes:
+      label: Device Specs (if known)
+      placeholder: CPU, GPU, RAM; display resolution and refresh rate
+  - type: input
+    id: network
+    attributes:
+      label: Network
+      placeholder: Wired / Wireless, region, typical ping
+  - type: checkboxes
+    id: extensions
+    attributes:
+      label: Browser Extensions
+      options:
+        - label: Ad blocker or privacy extensions are enabled
+        - label: Overlays or performance tools are enabled
+        - label: I tried disabling extensions and retesting
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched open and closed issues for duplicates
+          required: true
+        - label: I have not included personal or account information
+          required: true
+        - label: I can retest if asked and provide additional details
+          required: true

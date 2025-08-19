@@ -1,0 +1,24 @@
+name: Question
+description: Ask for clarification about gameplay, account, access, or general usage.
+title: "[Question] Brief summary"
+labels: ["question", "status:needs-triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      placeholder: State your question clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add any details that help us answer, including screenshots if helpful.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues
+          required: true

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reports
+    url: mailto:security@sicar.io
+    about: Report vulnerabilities and exploits privately.
+  - name: Community Discord
+    url: https://discord.gg/tetwdUAPRP
+    about: Ask quick questions and get community help.
+  - name: Player Support
+    url: mailto:support@sicar.io
+    about: Account-specific questions and confidential matters.

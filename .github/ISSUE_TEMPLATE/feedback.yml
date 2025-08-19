@@ -1,0 +1,37 @@
+name: Feedback / Feature Request
+description: Share feedback or a suggestion to improve Sicar.
+title: "[Feedback] Brief summary"
+labels: ["feedback", "status:needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: Describe the user problem, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      placeholder: Describe the change or feature and why it would help.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      placeholder: Who benefits and in which scenarios?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: Gameplay
+        - label: UI / UX
+        - label: Social / Parties
+        - label: Progression / Rewards
+        - label: Accessibility
+        - label: Performance
